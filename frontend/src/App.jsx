@@ -28,55 +28,7 @@ import Navbar from './components/Navbar'
   return (
     <main>
       <Navbar />
-      <div
-  className="galaxy-background"
-  style={{
-    transform: `translateY(${scrollY * 0.18}px) scale(1.12)`,
-  }}
-/>
-      <div
-  className="scroll-planet"
-  style={{
-    transform: `translate(${scrollY * -0.35}px, ${scrollY * 0.15}px) rotate(${scrollY * 0.08}deg)`,
-  }}
->
-  <img src="/planet.png" alt="Planet" />
-</div>
-<div
-  className="scroll-planet planet-two"
-  style={{
-    transform: `translate(${scrollY * 0.3}px, ${scrollY * 0.08}px) rotate(${scrollY * -0.06}deg)`,
-    opacity: Math.min(Math.max((scrollY - 500) / 400, 0), 1),
-  }}
->
-  <img src="/planet2.png" alt="Planet 2" />
-</div>
-<div
-  className="scroll-planet planet-three"
-  style={{
-    transform: `translate(${scrollY * -0.22}px, ${scrollY * 0.12}px) rotate(${scrollY * 0.05}deg)`,
-    opacity: Math.min(Math.max((scrollY - 1200) / 400, 0), 1),
-  }}
->
-  <img src="/planet3.png" alt="Planet 3" />
-</div>
-<div
-  className="scroll-planet planet-four"
-  style={{
-    transform: `translate(${scrollY * 0.28}px, ${scrollY * 0.1}px) rotate(${scrollY * -0.04}deg)`,
-    opacity: projectsRef.current
-      ? Math.min(
-          Math.max(
-            (scrollY - projectsRef.current.offsetTop + 300) / 400,
-            0
-          ),
-          1
-        )
-      : 0,
-  }}
->
-  <img src="/planet4.png" alt="Planet 4" />
-</div>
+      
       <div
   style={{
     transform: `translateY(${scrollY * -0.25}px) scale(${Math.max(
