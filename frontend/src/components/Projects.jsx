@@ -82,7 +82,7 @@ function Projects() {
     <div className="project-tech">
         <div className="project-actions">
     <a
-    href="https://github.com/prajwalsortur"
+    href="https://github.com/prajwalsortur/FOOD-WASTE-ANALYTICS-FOR-RESTAURANT.git"
     className="project-button"
     target="_blank"
     rel="noreferrer"
