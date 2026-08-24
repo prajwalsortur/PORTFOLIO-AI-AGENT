@@ -26,8 +26,19 @@ import Navbar from './components/Navbar'
   }, [])
 
   return (
-    <main>
-      <Navbar />
+  <main>
+    <video
+      className="fire-background"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="/fire.mp4" type="video/mp4" />
+    </video>
+    <div className="fire-overlay"></div>
+
+    <Navbar />
       
       <div
   style={{
