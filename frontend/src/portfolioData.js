@@ -28,7 +28,7 @@ const portfolioData = {
   experience: {
     role: 'Applied AI Intern',
     company: 'Gleamator Technologies LLP',
-    duration: '2025–2026',
+   duration: '2025-2026',
     description:
       'Worked on Python, SQL, data analytics, machine learning, Power BI, and AI-based projects during the internship.',
   },
@@ -87,3 +87,4 @@ const portfolioData = {
 }
 
 export default portfolioData
+
