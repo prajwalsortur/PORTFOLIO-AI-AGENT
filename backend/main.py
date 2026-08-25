@@ -1,13 +1,15 @@
 import os
 
 from dotenv import load_dotenv
-from fastapi import FastAPI
+from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
-
+from groq import Groq
 
 load_dotenv()
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -18,8 +20,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
 
 
 PORTFOLIO_CONTEXT = """
@@ -94,12 +94,12 @@ def health():
     return {"status": "ok"}
 
 
-import requests
-from fastapi import Form
+groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 @app.post("/chat")
 def chat(message: str = Form(...)):
+
     prompt = f"""
 {PORTFOLIO_CONTEXT}
 
@@ -109,18 +109,16 @@ USER QUESTION:
 Answer the user's question using only the portfolio information above.
 """
 
-    response = requests.post(
-        "http://127.0.0.1:11434/api/generate",
-        json={
-            "model": "qwen2.5:1.5b",
-            "prompt": prompt,
-            "stream": False,
-        },
-        timeout=120,
+    response = groq_client.chat.completions.create(
+        model="openai/gpt-oss-20b",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        ],
+        temperature=0.4,
+        max_tokens=300,
     )
 
-    response.raise_for_status()
-
-    data = response.json()
-
-    return {"response": data["response"]}
+    return {"response": response.choices[0].message.content}
