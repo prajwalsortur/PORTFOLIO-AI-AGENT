@@ -5,8 +5,7 @@ from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 from groq import Groq
 
-load_dotenv()
-from fastapi.middleware.cors import CORSMiddleware
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 app = FastAPI()
 
