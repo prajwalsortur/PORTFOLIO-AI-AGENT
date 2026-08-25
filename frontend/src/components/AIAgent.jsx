@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import ReactMarkdown from 'react-markdown'
 import portfolioData from '../portfolioData'
 
 function AIAgent() {
@@ -266,7 +267,19 @@ function AIAgent() {
                     : 'ai-message-assistant'
                 }`}
               >
-                {message.text}
+                <ReactMarkdown
+  components={{
+    a: ({ node, ...props }) => (
+      <a
+        {...props}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    )
+  }}
+>
+  {message.text}
+</ReactMarkdown>
               </div>
             ))}
 
