@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
+import AIAgent from './components/AIAgent'
 
 
  function App() {
@@ -39,6 +40,7 @@ import Navbar from './components/Navbar'
     <div className="fire-overlay"></div>
 
     <Navbar />
+    <AIAgent />
       
       <div
   style={{
