@@ -34,83 +34,100 @@ function AIAgent() {
   }
 
   const handleLocalAction = (question) => {
-    const query = question.toLowerCase()
+  const query = question.toLowerCase().trim()
 
-    if (
-      query.includes('show about') ||
-      query.includes('open about') ||
-      query.includes('show about me') ||
-      query.includes('open about me')
-    ) {
-      document.getElementById('about')?.scrollIntoView({
-        behavior: 'smooth'
-      })
+  // About
+  if (
+  query === 'about' ||
+  query.includes('about me') ||
+  query.includes('who is prajwal') ||
+  query.includes('tell me about prajwal')
+) {
+    document.getElementById('about')?.scrollIntoView({
+      behavior: 'smooth'
+    })
 
-      return "Opening Prajwal's About section for you."
-    }
-
-    if (
-      query.includes('show my skills') ||
-      query.includes('open my skills') ||
-      query.includes('show skills') ||
-      query.includes('open skills')
-    ) {
-      document.getElementById('skills')?.scrollIntoView({
-        behavior: 'smooth'
-      })
-
-      return "Opening Prajwal's skills for you."
-    }
-
-    if (
-      query.includes('show my experience') ||
-      query.includes('open my experience') ||
-      query.includes('show experience') ||
-      query.includes('open experience')
-    ) {
-      document.getElementById('experience')?.scrollIntoView({
-        behavior: 'smooth'
-      })
-
-      return "Opening Prajwal's experience for you."
-    }
-
-    if (
-      query.includes('show my projects') ||
-      query.includes('open my projects') ||
-      query.includes('show projects') ||
-      query.includes('open projects')
-    ) {
-      document.getElementById('projects')?.scrollIntoView({
-        behavior: 'smooth'
-      })
-
-      return "Opening Prajwal's projects for you."
-    }
-
-    if (
-      query.includes('open my github') ||
-      query.includes('open github') ||
-      query.includes('show my github')
-    ) {
-      window.open(portfolioData.links.github, '_blank')
-
-      return "Opening Prajwal's GitHub for you."
-    }
-
-    if (
-      query.includes('open my cv') ||
-      query.includes('open cv') ||
-      query.includes('show my cv') ||
-      query.includes('resume')
-    ) {
-      window.open(portfolioData.links.cv, '_blank')
-
-      return "Opening Prajwal's CV for you."
-    }
-
-    return null
+    return "Opening Prajwal's About section for you."
   }
+
+  // Skills
+  if (
+    query.includes('skills') ||
+    query.includes('skill set') ||
+    query.includes('technologies') ||
+    query.includes('technical skills')
+  ) {
+    document.getElementById('skills')?.scrollIntoView({
+      behavior: 'smooth'
+    })
+
+    return "Opening Prajwal's skills for you."
+  }
+
+  // Experience
+  if (
+    query.includes('experience') ||
+    query.includes('internship') ||
+    query.includes('work experience') ||
+    query.includes('professional experience')
+  ) {
+    document.getElementById('experience')?.scrollIntoView({
+      behavior: 'smooth'
+    })
+
+    return "Opening Prajwal's experience for you."
+  }
+
+  // Projects
+  if (
+  query.includes('projects') ||
+  query.includes('project') ||
+  query.includes('portfolio projects') ||
+  query.includes('my work') ||
+  query.includes('your work') ||
+  query.includes('show work')
+) {
+    document.getElementById('projects')?.scrollIntoView({
+      behavior: 'smooth'
+    })
+
+    return "Opening Prajwal's projects for you."
+  }
+
+  // GitHub
+  if (
+    query.includes('github') ||
+    query.includes('github profile') ||
+    query.includes('github account')
+  ) {
+    window.open(portfolioData.links.github, '_blank')
+
+    return "Opening Prajwal's GitHub for you."
+  }
+
+  // LinkedIn
+  if (
+    query.includes('linkedin') ||
+    query.includes('linkedin profile')
+  ) {
+    window.open(portfolioData.links.linkedin, '_blank')
+
+    return "Opening Prajwal's LinkedIn profile for you."
+  }
+
+  // CV / Resume
+  if (
+    query.includes('cv') ||
+    query.includes('resume') ||
+    query.includes('curriculum vitae')
+  ) {
+    window.open(portfolioData.links.cv, '_blank')
+
+    return "Opening Prajwal's CV for you."
+  }
+
+  return null
+}
 
   const askBackend = async (question) => {
     try {
