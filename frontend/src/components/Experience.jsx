@@ -34,7 +34,7 @@ function Experience() {
         <h4>Gleamator Technologies LLP</h4>
 
         <p className="experience-duration">
-          2025 – 2026
+          2025 - 2026
         </p>
 
         <p>
