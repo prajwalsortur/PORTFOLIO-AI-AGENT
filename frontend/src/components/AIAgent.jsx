@@ -64,6 +64,21 @@ function AIAgent() {
     return "Opening Prajwal's skills for you."
   }
 
+  // Education
+  if (
+    query.includes('education') ||
+    query.includes('degree') ||
+    query.includes('qualification') ||
+    query.includes('college') ||
+    query.includes('university') ||
+    query.includes('study')
+  ) {
+    document.getElementById('about')?.scrollIntoView({
+      behavior: 'smooth'
+    })
+
+    return "Opening Prajwal's education details for you."
+  }
   // Experience
   if (
     query.includes('experience') ||
