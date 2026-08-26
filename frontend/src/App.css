@@ -130,11 +130,13 @@ p {
   padding: 14px 28px;
   border: 1px solid var(--neon);
   border-radius: 14px;
-  background: transparent;
+  background: rgba(5, 5, 5, 0.55);
   color: white;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 0 10px var(--neon-glow);
 }
 
@@ -727,7 +729,7 @@ main p {
   backdrop-filter: blur(12px);
 
   transition: all 0.3s ease;
-}
+  backdrop-filter: blur(12px);`r`n  -webkit-backdrop-filter: blur(12px);`r`n}
 
 .ai-agent-button:hover {
   transform: translateY(-4px);
@@ -784,7 +786,7 @@ main p {
 
 .ai-agent-close {
   border: none;
-  background: transparent;
+  background: rgba(5, 5, 5, 0.55);
   color: white;
 
   font-size: 24px;
@@ -1062,6 +1064,8 @@ main p {
     width: min(700px, 90%);
   }
 }
+
+
 
 
 
