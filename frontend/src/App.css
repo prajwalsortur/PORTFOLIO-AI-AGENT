@@ -1007,6 +1007,7 @@ main p {
 
 .skills {
   position: relative;
+  scroll-margin-top: 75px;
 }
 
 .skills-grid {
@@ -1052,7 +1053,8 @@ main p {
 
 .skill-tags span {
   padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 6px var(--neon-glow);
   border-radius: 20px;
   color: white;
   font-size: 13px;
@@ -1106,6 +1108,11 @@ main p {
     transform: translateY(0);
   }
 }
+
+
+
+
+
 
 
 
