@@ -596,26 +596,27 @@ section > h2 {
 
   .navbar {
     top: 12px;
-    width: 94%;
-    padding: 12px 14px;
+    width: 92%;
+    padding: 10px 12px;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 
   .navbar-logo {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .navbar-links {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 3px;
   }
 
   .navbar-links button {
-    padding: 7px 9px;
-    font-size: 12px;
+    padding: 6px 7px;
+    font-size: 11px;
+    white-space: nowrap;
   }
 
   /* HERO */
@@ -1108,6 +1109,7 @@ main p {
     transform: translateY(0);
   }
 }
+
 
 
 
