@@ -82,16 +82,18 @@ p {
 .hero {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+    justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
 .hero-content {
+  width: 100%;
   max-width: 900px;
   padding: 40px;
+  margin: 0 auto;
 }
 
 .hero-greeting {
@@ -1409,3 +1411,8 @@ main p {
     height: 500px;
   }
 }
+
+
+
+
+

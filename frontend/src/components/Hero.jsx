@@ -47,20 +47,7 @@ function Hero() {
       },
       '-=0.5'
     )
-    .fromTo(
-      '.hero-description',
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-      },
-      '-=0.4'
-    )
+    
     .fromTo(
       '.hero-buttons',
       {
@@ -99,8 +86,6 @@ function Hero() {
   AI & Machine Learning Enthusiast
 </h2>
 
-<p className="hero-description">
-        </p>
 
                 <div className="hero-buttons">
           <button
