@@ -108,7 +108,7 @@ p {
 }
 
 .hero h1 {
-  font-size: 80px;
+  font-size: 60px;
   margin-bottom: 10px;
   letter-spacing: 3px;
 }
@@ -1061,4 +1061,5 @@ main p {
     width: min(700px, 90%);
   }
 }
+
 

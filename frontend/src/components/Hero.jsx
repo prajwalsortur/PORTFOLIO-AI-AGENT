@@ -80,7 +80,7 @@ function Hero() {
           Welcome ! 
         </p>
 
-        <h1 className="hero-title">Prajwal Sortur</h1>
+        <h1 className="hero-title">PRAJWAL SORTUR</h1>
 
 <h2 className="hero-subtitle">
   AI & Machine Learning Enthusiast
@@ -140,3 +140,4 @@ function Hero() {
 }
 
 export default Hero
+
