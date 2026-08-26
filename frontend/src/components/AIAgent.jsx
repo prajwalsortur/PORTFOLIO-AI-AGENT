@@ -144,6 +144,47 @@ function AIAgent() {
   return null
 }
 
+  const getPortfolioAnswer = (question) => {
+    const query = question.toLowerCase().trim()
+
+    if (
+      (query.includes('what are prajwal') && query.includes('skills')) ||
+      query.includes('what skills') ||
+      query.includes('skill set')
+    ) {
+      return `Prajwal's key skills include ${portfolioData.skills.join(', ')}.`
+    }
+
+    if (
+      (query.includes('what') && query.includes('project')) ||
+      (query.includes('tell me about') && query.includes('project'))
+    ) {
+      return portfolioData.projects
+        .map(
+          (project) =>
+            `**${project.name}** - ${project.description} Technologies: ${project.technologies.join(', ')}.`
+        )
+        .join('\n\n')
+    }
+
+    if (
+      query.includes('education') ||
+      query.includes('degree') ||
+      query.includes('qualification')
+    ) {
+      return `Prajwal completed a ${portfolioData.education.degree} in ${portfolioData.education.branch}.`
+    }
+
+    if (
+      query.includes('experience') ||
+      query.includes('internship') ||
+      query.includes('worked')
+    ) {
+      return `Prajwal worked as an ${portfolioData.experience.role} at ${portfolioData.experience.company} during ${portfolioData.experience.duration}. ${portfolioData.experience.description}`
+    }
+
+    return null
+  }
   const askBackend = async (question) => {
     try {
       setIsLoading(true)
@@ -175,7 +216,8 @@ function AIAgent() {
   }
 
   const processMessage = async (message) => {
-    const localActionResponse = handleLocalAction(message)
+    const portfolioAnswer = getPortfolioAnswer(message)
+    const localActionResponse = portfolioAnswer ? null : handleLocalAction(message)
 
     setMessages((prev) => [
       ...prev,
@@ -191,6 +233,8 @@ function AIAgent() {
 
     if (localActionResponse) {
       response = localActionResponse
+    } else if (portfolioAnswer) {
+      response = portfolioAnswer
     } else {
       response = await askBackend(message)
     }
