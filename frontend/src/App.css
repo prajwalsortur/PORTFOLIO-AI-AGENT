@@ -425,6 +425,7 @@ p {
 
 .contact {
   position: relative;
+  scroll-margin-top: 75px;
 }
 
 .contact > p {
@@ -1105,6 +1106,7 @@ main p {
     transform: translateY(0);
   }
 }
+
 
 
 
