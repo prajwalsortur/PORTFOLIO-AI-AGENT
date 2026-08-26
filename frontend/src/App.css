@@ -267,6 +267,7 @@ p {
 
 .experience {
   position: relative;
+  scroll-margin-top: 75px;
 }
 
 .experience-card {
@@ -1104,6 +1105,8 @@ main p {
     transform: translateY(0);
   }
 }
+
+
 
 
 
