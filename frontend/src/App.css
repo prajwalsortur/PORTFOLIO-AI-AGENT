@@ -109,15 +109,13 @@ p {
   margin-bottom: 10px;
   letter-spacing: 3px;
 }
-
-
-.hero-description {
-  max-width: 650px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
-  font-size: 18px;
-  opacity: 0.75;
+.hero-subtitle {
+  font-size: 20px;
+  margin: 0 0 30px;
+  opacity: 0.8;
+  letter-spacing: 1px;
 }
+
 
 .hero-buttons {
   display: flex;
@@ -1145,9 +1143,6 @@ section > h2 {
     font-size: 24px;
   }
 
-  .hero-description {
-    font-size: 16px;
-  }
 
   .hero-buttons {
     flex-direction: column;
@@ -1411,6 +1406,7 @@ main p {
     height: 500px;
   }
 }
+
 
 
 
