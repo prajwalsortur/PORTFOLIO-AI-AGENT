@@ -348,6 +348,7 @@ p {
 
 .about {
   position: relative;
+  scroll-margin-top: 100px;
 }
 
 .about > p {
@@ -1103,6 +1104,7 @@ main p {
     transform: translateY(0);
   }
 }
+
 
 
 
