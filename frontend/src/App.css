@@ -258,6 +258,7 @@ p {
 
 .projects {
   position: relative;
+  scroll-margin-top: 100px;
 }
 
 .experience {
@@ -1061,5 +1062,8 @@ main p {
     width: min(700px, 90%);
   }
 }
+
+
+
 
 
