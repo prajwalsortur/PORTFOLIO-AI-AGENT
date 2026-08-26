@@ -47,7 +47,7 @@ function Projects() {
     <div className="project-tech">
     <div className="project-actions">
   <a
-    href="https://github.com/prajwalsortur"
+    href="https://github.com/prajwalsortur/PERSONAL-FINANCE-ANOMALY-DETECTOR.git"
     className="project-button"
     target="_blank"
     rel="noreferrer"
