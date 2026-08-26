@@ -41,7 +41,7 @@ function AIAgent() {
   query === 'about' ||
   query.includes('about me') ||
   query.includes('who is prajwal') ||
-  query.includes('tell me about prajwal')
+  query.includes('tell me about prajwal') && !query.includes('project') && !query.includes('skill') && !query.includes('experience')
 ) {
     document.getElementById('about')?.scrollIntoView({
       behavior: 'smooth'
@@ -343,4 +343,3 @@ function AIAgent() {
 }
 
 export default AIAgent
-
