@@ -233,54 +233,6 @@ p {
 .navbar-links button:hover {
   opacity: 0.6;
 }
-.contact {
-  min-height: 70vh;
-  padding: 120px 20px;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.contact > p {
-  max-width: 600px;
-  opacity: 0.75;
-  line-height: 1.7;
-}
-
-.contact-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 35px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact-links a {
-  padding: 12px 22px;
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-
-  color: white;
-  text-decoration: none;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-}
-
-.contact-links a:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.1);
-}
 
 
 @media (max-width: 800px) {
@@ -1076,6 +1028,7 @@ main p {
 .project-card {
   animation: neonColor 6s linear infinite;
 }
+
 
 
 
