@@ -254,7 +254,7 @@ function AIAgent() {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Open AI assistant"
       >
-        ✨ AI
+        &#10024; AI
       </button>
 
       {isOpen && (
@@ -270,7 +270,7 @@ function AIAgent() {
               onClick={() => setIsOpen(false)}
               aria-label="Close AI assistant"
             >
-              ×
+              &#10005;
             </button>
           </div>
 
@@ -325,7 +325,7 @@ function AIAgent() {
               className={isListening ? 'listening' : ''}
               aria-label="Use voice input"
             >
-              🎙️
+              &#127908;
             </button>
 
             <button
@@ -333,7 +333,7 @@ function AIAgent() {
               aria-label="Send message"
               disabled={isLoading}
             >
-              ➤
+              &#10148;
             </button>
           </div>
         </div>
@@ -343,3 +343,4 @@ function AIAgent() {
 }
 
 export default AIAgent
+
