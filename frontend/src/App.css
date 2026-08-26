@@ -94,6 +94,9 @@ p {
   max-width: 900px;
   padding: 40px;
   margin: 0 auto;
+
+  position: relative;
+  z-index: 1;
 }
 
 .hero-greeting {
@@ -168,10 +171,6 @@ p {
   }
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
 .hero-background {
   position: absolute;
   inset: 0;
@@ -185,54 +184,7 @@ p {
   z-index: 0;
 }
 
-.hero {
-  position: relative;
-}
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 20px 40px;
-
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-}
-
-.navbar-logo {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar-links button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.navbar-links button:hover {
-  opacity: 0.6;
-}
 
 
 @media (max-width: 800px) {
@@ -1031,4 +983,82 @@ main p {
 
 
 
+
+
+
+
+
+
+
+/* ================================
+   SKILLS SECTION
+   ================================ */
+
+.skills {
+  position: relative;
+}
+
+.skills-grid {
+  width: min(1000px, 90%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  padding: 30px;
+  background: rgba(15, 5, 10, 0.85);
+  border: 1px solid var(--neon);
+  border-radius: 24px;
+  box-shadow:
+    0 0 10px var(--neon-glow),
+    inset 0 0 20px rgba(255, 45, 85, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 15px var(--neon-glow),
+    0 0 30px rgba(255, 45, 85, 0.2);
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skill-tags span {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  color: white;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+
+.skill-tags span:hover {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon-glow);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    width: min(700px, 90%);
+  }
+}
 
