@@ -751,13 +751,13 @@ main p {
 
 .ai-agent-panel {
  position: fixed;
-top: 0;
-right: 0;
-bottom: 0;
+top: 10px;
+right: 10px;
+bottom: 20px;
 
-width: 30vw;
-min-width: 320px;
-height: 100vh;
+top: 100px;
+right: 10px;
+bottom: 10px;
 
   display: flex;
   flex-direction: column;
@@ -1127,7 +1127,16 @@ main:has(.ai-agent-panel) .ai-agent-button {
 .ai-agent-panel {
   font-size: 12px;
 }
-
+/* Portfolio boundary when AI assistant is open */
+main:has(.ai-agent-panel) {
+  border-right: 5px solid rgba(255, 45, 85, 0.6);
+}
+/* Move AI button to top-right when assistant is open */
+main:has(.ai-agent-panel) .ai-agent-button {
+  top: 40px;
+  right: 20px;
+  bottom: auto;
+}
 
 
 
