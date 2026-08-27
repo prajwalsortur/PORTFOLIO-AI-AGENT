@@ -36,13 +36,19 @@ function AIAgent() {
   const handleLocalAction = (question) => {
   const query = question.toLowerCase().trim()
 
-  // About
+    // About
   if (
-  query === 'about' ||
-  query.includes('about me') ||
-  query.includes('who is prajwal') ||
-  query.includes('tell me about prajwal') && !query.includes('project') && !query.includes('skill') && !query.includes('experience')
-) {
+    query === 'about' ||
+    query.includes('about me') ||
+    (
+      (query.includes('who is prajwal') || query.includes('tell me about prajwal')) &&
+      !query.includes('project') &&
+      !query.includes('skill') &&
+      !query.includes('experience') &&
+      !query.includes('internship') &&
+      !query.includes('education')
+    )
+  ) {
     document.getElementById('about')?.scrollIntoView({
       behavior: 'smooth'
     })
@@ -147,6 +153,59 @@ function AIAgent() {
   const getPortfolioAnswer = (question) => {
     const query = question.toLowerCase().trim()
 
+    // About / identity answers
+    if (
+      query.includes('tell me about yourself') ||
+      (
+  query.includes('tell me about prajwal') &&
+  !query.includes('project') &&
+  !query.includes('personal finance') &&
+  !query.includes('finance anomaly') &&
+  !query.includes('food waste') &&
+  !query.includes('e-commerce') &&
+  !query.includes('ecommerce') &&
+  !query.includes('customer behaviour') &&
+  !query.includes('customer behavior')
+) ||
+      (
+  (query.includes('who is prajwal') || query.includes('about prajwal')) &&
+  !query.includes('project') &&
+  !query.includes('personal finance') &&
+  !query.includes('finance anomaly') &&
+  !query.includes('food waste') &&
+  !query.includes('e-commerce') &&
+  !query.includes('ecommerce') &&
+  !query.includes('customer behaviour') &&
+  !query.includes('customer behavior')
+)
+    ) {
+      return portfolioData.about
+    }
+
+    if (
+      query.includes('what is prajwal') ||
+      query.includes('what does prajwal do') ||
+      query.includes('prajwal profile')
+    ) {
+      return `Prajwal Sortur is an ${portfolioData.title}. He is a ${portfolioData.education.degree} graduate in ${portfolioData.education.branch} with interests in Artificial Intelligence, Machine Learning, and Data Analytics.`
+    }
+
+    if (
+  (
+    (query.includes('what') && query.includes('technology')) ||
+    (query.includes('what') && query.includes('technologies')) ||
+    query.includes('tech stack')
+  ) &&
+  !query.includes('personal finance') &&
+  !query.includes('finance anomaly') &&
+  !query.includes('food waste') &&
+  !query.includes('e-commerce') &&
+  !query.includes('ecommerce') &&
+  !query.includes('customer behaviour') &&
+  !query.includes('customer behavior')
+) {
+  return `Prajwal works with technologies including ${portfolioData.skills.join(', ')}.`
+}
     if (
       (query.includes('what are prajwal') && query.includes('skills')) ||
       query.includes('what skills') ||
@@ -155,9 +214,51 @@ function AIAgent() {
       return `Prajwal's key skills include ${portfolioData.skills.join(', ')}.`
     }
 
+    // Project-specific answers
+    if (
+      query.includes('personal finance') ||
+      query.includes('finance anomaly') 
+    ) {
+      const project = portfolioData.projects.find(
+        (item) => item.name === 'Personal Finance Anomaly Detector'
+      )
+
+      return `**${project.name}** - ${project.description} Technologies: ${project.technologies.join(', ')}.`
+    }
+
+    if (
+      query.includes('food waste') ||
+      query.includes('restaurant food waste')
+    ) {
+      const project = portfolioData.projects.find(
+        (item) => item.name === 'Food Waste Analytics'
+      )
+
+      return `**${project.name}** - ${project.description} Technologies: ${project.technologies.join(', ')}.`
+    }
+
+    if (
+      query.includes('e-commerce') ||
+      query.includes('ecommerce') ||
+      query.includes('customer behaviour') ||
+      query.includes('customer behavior')
+    ) {
+      const project = portfolioData.projects.find(
+        (item) => item.name === 'E-Commerce Sales & Customer Behaviour Analytics'
+      )
+
+      return `**${project.name}** - ${project.description} Technologies: ${project.technologies.join(', ')}.`
+    }
     if (
       (query.includes('what') && query.includes('project')) ||
-      (query.includes('tell me about') && query.includes('project'))
+      (query.includes('tell me about') && query.includes('project')) ||
+      query.includes('what has prajwal built') ||
+      query.includes('what has he built') ||
+      query.includes('what projects has he worked on') ||
+      query.includes('what projects did he do') ||
+      query.includes('show me his projects') ||
+      query.includes('list his projects') ||
+      query.includes('projects has prajwal worked on')
     ) {
       return portfolioData.projects
         .map(
@@ -170,7 +271,13 @@ function AIAgent() {
     if (
       query.includes('education') ||
       query.includes('degree') ||
-      query.includes('qualification')
+      query.includes('qualification') ||
+      query.includes('what did prajwal study') ||
+      query.includes('what did he study') ||
+      query.includes('where did prajwal study') ||
+      query.includes('where did he study') ||
+      query.includes('educational background') ||
+      query.includes('academic background')
     ) {
       return `Prajwal completed a ${portfolioData.education.degree} in ${portfolioData.education.branch}.`
     }
@@ -178,7 +285,15 @@ function AIAgent() {
     if (
       query.includes('experience') ||
       query.includes('internship') ||
-      query.includes('worked')
+      query.includes('worked') ||
+      query.includes('where did prajwal work') ||
+      query.includes('where did he work') ||
+      query.includes('where did prajwal intern') ||
+      query.includes('where did he intern') ||
+      query.includes('what did prajwal do during his internship') ||
+      query.includes('what did he do during his internship') ||
+      query.includes('work experience') ||
+      query.includes('what was his role')
     ) {
       return `Prajwal worked as an ${portfolioData.experience.role} at ${portfolioData.experience.company} during ${portfolioData.experience.duration}. ${portfolioData.experience.description}`
     }
