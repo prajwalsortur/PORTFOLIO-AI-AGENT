@@ -13,7 +13,7 @@ function AIAgent() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      text: "Hi! I'm Prajwal's AI assistant. Ask me about his projects, skills, experience, education, or anything else about his portfolio."
+      text: "👋 Welcome! How can I assist?"
     }
   ])
 

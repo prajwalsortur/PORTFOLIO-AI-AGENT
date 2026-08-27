@@ -750,13 +750,14 @@ main p {
 }
 
 .ai-agent-panel {
-  position: fixed;
-  right: 28px;
-  bottom: 90px;
-  z-index: 2000;
+ position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
 
-  width: min(380px, calc(100vw - 40px));
-  height: 520px;
+width: 30vw;
+min-width: 320px;
+height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -1109,8 +1110,23 @@ main p {
     transform: translateY(0);
   }
 }
+/* Main portfolio layout when AI assistant is open */
+main:has(.ai-agent-panel) {
+  width: 70%;
+  margin-right: 30%;
+}
 
-
+main:has(.ai-agent-panel) > .ai-agent-panel {
+  width: 30vw;
+}
+/* Move AI button outside the panel when assistant is open */
+main:has(.ai-agent-panel) .ai-agent-button {
+  right: calc(30vw + 28px);
+}
+/* Compact text inside AI assistant */
+.ai-agent-panel {
+  font-size: 12px;
+}
 
 
 
