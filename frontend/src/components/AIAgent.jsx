@@ -146,13 +146,35 @@ function AIAgent() {
 
     return "Opening Prajwal's CV for you."
   }
+  // Contact
+if (
+  query.includes('contact') ||
+  query.includes('go to contact') ||
+  query.includes('contact me') ||
+  query.includes('get in touch')
+) {
+  document.getElementById('contact')?.scrollIntoView({
+    behavior: 'smooth'
+  })
+
+  return "Opening Prajwal's contact section for you."
+}
 
   return null
 }
 
   const getPortfolioAnswer = (question) => {
     const query = question.toLowerCase().trim()
-
+// Recruiter fit
+if (
+  query.includes('why should i consider prajwal') ||
+  query.includes('why consider prajwal') ||
+  query.includes('why should we hire prajwal') ||
+  query.includes('why hire prajwal') ||
+  query.includes('why should i hire prajwal')
+) {
+  return "Prajwal combines Electronics & Communication Engineering with hands-on experience in AI, Machine Learning, and Data Analytics, supported by practical projects and an Applied AI internship."
+}
     // About / identity answers
     if (
       query.includes('tell me about yourself') ||
@@ -213,7 +235,19 @@ function AIAgent() {
     ) {
       return `Prajwal's key skills include ${portfolioData.skills.join(', ')}.`
     }
+    // Strongest project
+    if (
+    query.includes('strongest project') ||
+    query.includes('best project') ||
+    query.includes('top project') ||
+    query.includes('most impressive project')
+    ) {
+    const project = portfolioData.projects.find(
+    (item) => item.name === 'Personal Finance Anomaly Detector'
+    )
 
+    return `**${project.name}** - ${project.description} Technologies: ${project.technologies.join(', ')}.`
+    }
     // Project-specific answers
     if (
       query.includes('personal finance') ||
