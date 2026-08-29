@@ -895,20 +895,16 @@ bottom: 10px;
   }
 
   .ai-agent-panel {
-    right: 18px;
-    bottom: 78px;
+    top: 70%;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
 
-    width: calc(100vw - 36px);
-    height: 500px;
+    width: auto;
+    height: auto;
   }
+
 }
-
-
-
-
-
-
-
 
 .project-card {
   width: min(850px, 90%);
@@ -1138,6 +1134,13 @@ main:has(.ai-agent-panel) .ai-agent-button {
   bottom: auto;
 }
 
+@media screen and (max-width: 768px) {
+  button.ai-agent-button {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
 
 
 
@@ -1148,4 +1151,28 @@ main:has(.ai-agent-panel) .ai-agent-button {
 
 
 
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
 
+.experience-skills span {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.experience-skills span {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #ff4f8b;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 79, 139, 0.35);
+}

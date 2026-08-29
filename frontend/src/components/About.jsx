@@ -4,38 +4,40 @@ function About() {
       <h2>About Me</h2>
 
       <p>
-        I am an Electronics and Communication Engineering graduate
-        with a strong interest in Artificial Intelligence, Machine
-        Learning, and Data Analytics.
+        I am an Electronics and Communication Engineering graduate focused
+        on Artificial Intelligence, Machine Learning, Data Science, and
+        Generative AI.
       </p>
 
       <p>
-        I enjoy building practical AI and data-driven applications
-        using Python, SQL, Machine Learning, and modern AI tools.
+        I build practical, data-driven applications using Python, SQL,
+        Machine Learning, LLMs, and RAG, with an interest in developing
+        intelligent solutions to real-world problems.
       </p>
 
       <p>
-        During my Applied AI internship, I worked on data analytics,
-        machine learning, SQL, Power BI, and AI-based projects,
-        gaining hands-on experience in developing real-world
-        solutions.
+        As an Applied AI Intern, I gained hands-on experience working with
+        data analytics, machine learning, SQL, Power BI, and AI-based
+        applications, strengthening my ability to turn data and AI
+        concepts into practical solutions.
       </p>
+
       <div className="about-highlights">
         <div className="about-highlight">
-        <h3>ECE Graduate</h3>
-        <p>Electronics & Communication Engineering</p>
+          <h3>ECE Graduate</h3>
+          <p>Electronics & Communication Engineering</p>
         </div>
 
         <div className="about-highlight">
-        <h3>AI/ML Focus</h3>
-        <p>Artificial Intelligence & Machine Learning</p>
+          <h3>AI/ML & Data Science</h3>
+          <p>Machine Learning • Data Science • Generative AI</p>
         </div>
 
         <div className="about-highlight">
-        <h3>Applied AI Intern</h3>
-        <p>Hands-on AI & Data Analytics experience</p>
+          <h3>Applied AI Intern</h3>
+          <p>AI • Machine Learning • Data Analytics</p>
         </div>
-        </div>
+      </div>
     </section>
   )
 }

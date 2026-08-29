@@ -1,7 +1,7 @@
 const portfolioData = {
   name: 'Prajwal Sortur',
 
-  title: 'AI & Machine Learning Enthusiast',
+  title: 'AI/ML Engineer | Data Science | Generative AI & LLM Applications',
 
   education: {
     degree: 'Bachelor of Engineering',
@@ -9,21 +9,29 @@ const portfolioData = {
   },
 
   about:
-    'Prajwal Sortur is an Electronics and Communication Engineering graduate with a strong interest in Artificial Intelligence, Machine Learning, and Data Analytics.',
+  'Prajwal Sortur is an Electronics and Communication Engineering graduate focused on Artificial Intelligence, Machine Learning, and Data Science. He builds practical AI and data-driven applications using Python, SQL, Machine Learning, Generative AI, LLMs, RAG, LangChain, and LangGraph.',
 
   skills: [
-    'Python',
-    'SQL',
-    'Machine Learning',
-    'Artificial Intelligence',
-    'Data Analytics',
-    'Pandas',
-    'NumPy',
-    'Scikit-learn',
-    'Power BI',
-    'Streamlit',
-    'Git',
-  ],
+  'Python',
+  'SQL',
+  'Machine Learning',
+  'Deep Learning',
+  'Artificial Intelligence',
+  'Data Science',
+  'Generative AI',
+  'LLMs',
+  'RAG',
+  'LangChain',
+  'LangGraph',
+  'Pandas',
+  'NumPy',
+  'Scikit-learn',
+  'PyTorch',
+  'Power BI',
+  'Streamlit',
+  'FastAPI',
+  'Git',
+],
 
   experience: {
     role: 'Applied AI Intern',

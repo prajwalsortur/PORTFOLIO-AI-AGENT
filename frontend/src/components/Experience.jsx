@@ -4,26 +4,28 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 function Experience() {
   gsap.registerPlugin(ScrollTrigger)
+
   useEffect(() => {
-  gsap.fromTo(
-    '.experience-card',
-    {
-      opacity: 0,
-      y: 100,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.experience-card',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse',
+    gsap.fromTo(
+      '.experience-card',
+      {
+        opacity: 0,
+        y: 100,
       },
-    }
-  )
-}, [])
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.experience-card',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    )
+  }, [])
+
   return (
     <section id="experience" className="experience">
       <h2>Experience</h2>
@@ -38,9 +40,21 @@ function Experience() {
         </p>
 
         <p>
-          Worked on Python, SQL, data analytics, machine learning,
-          Power BI, and AI-based projects during my internship.
+          Gained hands-on experience in Artificial Intelligence, Machine
+          Learning, Data Analytics, and business intelligence through
+          practical projects and applied problem-solving.
         </p>
+
+        <div className="experience-skills">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Machine Learning</span>
+          <span>Power BI</span>
+          <span>Data Analytics</span>
+          <span>Generative AI</span>
+        </div>
       </div>
     </section>
   )

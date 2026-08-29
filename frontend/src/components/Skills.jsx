@@ -22,22 +22,36 @@ function Skills() {
           <h3>AI & Machine Learning</h3>
 
           <div className="skill-tags">
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
             <span>Scikit-learn</span>
             <span>TensorFlow</span>
             <span>PyTorch</span>
-            <span>Machine Learning</span>
+            <span>Artificial Intelligence</span>
+          </div>
+        </div>
+
+        <div className="skill-card">
+          <h3>Generative AI & LLMs</h3>
+
+          <div className="skill-tags">
             <span>Generative AI</span>
+            <span>LLMs</span>
+            <span>RAG</span>
+            <span>LangChain</span>
+            <span>LangGraph</span>
             <span>Gemini AI</span>
           </div>
         </div>
 
         <div className="skill-card">
-          <h3>Tools & Visualization</h3>
+          <h3>Tools & Deployment</h3>
 
           <div className="skill-tags">
             <span>Power BI</span>
             <span>Tableau</span>
             <span>Streamlit</span>
+            <span>FastAPI</span>
             <span>Git</span>
             <span>VS Code</span>
             <span>Jupyter</span>
