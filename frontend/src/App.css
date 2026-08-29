@@ -1,13 +1,14 @@
 /* 🔥 Full-page fire background */
-.fire-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-  pointer-events: none;
+.fire-background { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  filter: brightness(0.55) saturate(0.85);
+  z-index: -2; 
+  pointer-events: none; 
 }
 /* 🌑 Darken the fire */
 .fire-overlay {
@@ -1176,3 +1177,4 @@ main:has(.ai-agent-panel) .ai-agent-button {
   color: #ffffff;
   box-shadow: 0 0 8px rgba(255, 79, 139, 0.35);
 }
+

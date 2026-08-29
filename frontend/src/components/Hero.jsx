@@ -73,8 +73,9 @@ function Hero() {
   return (
     <section className="hero">
 
-        <div className="hero-background"></div>
-        <div className="hero-content">
+    <div className="hero-background"></div>
+    <div className="hero-overlay"></div>
+    <div className="hero-content">
 
         <p className="hero-greeting">
           Welcome ! 
