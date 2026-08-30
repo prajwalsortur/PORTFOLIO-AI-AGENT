@@ -252,10 +252,10 @@ p {
 .hero-title {
   color: white;
   text-shadow:
-    0 0 3px #38bdf8,
-    0 0 8px #38bdf8,
-    0 0 15px #38bdf8,
-    0 0 30px rgba(56, 189, 248, 0.7);
+    0 0 3px #dabe73,
+    0 0 8px #f5c542,
+    0 0 15px #f5c542,
+    0 0 30px rgba(244, 199, 85, 0.7);
 }
 /* ================================
    PROJECT CARDS - NEON STYLE
@@ -492,12 +492,12 @@ p {
    ================================ */
 
 section > h2 {
-  color: white;
+  color: #f5c542;
   text-shadow:
-    0 0 3px #ffd700,
-    0 0 8px #ffd700,
-    0 0 15px rgba(255, 215, 0, 0.8),
-    0 0 30px rgba(255, 180, 0, 0.5);
+    0 0 3px #f5c542,
+    0 0 8px #f5c542,
+    0 0 15px rgba(245, 197, 66, 0.8),
+    0 0 30px rgba(245, 197, 66, 0.5);
 }
 /* ================================
    NAVBAR - PREMIUM NEON
@@ -534,10 +534,20 @@ section > h2 {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 3px;
-
   text-shadow:
-    0 0 5px #38bdf8,
-    0 0 12px rgba(56, 189, 248, 0.7);
+    0 0 3px #d4af37,
+    0 0 8px rgba(212, 175, 55, 0.6);
+  cursor: pointer;
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  text-shadow:
+    0 0 4px #d4af37,
+    0 0 10px #d4af37,
+    0 0 20px rgba(212, 175, 55, 0.8),
+    0 0 35px rgba(212, 175, 55, 0.5);
+  transform: scale(1.05);
 }
 
 .navbar-links {
@@ -686,7 +696,8 @@ section > h2 {
     text-align: center;
   }
 }
-/* ✨ White text with subtle dark-gold fire glow */
+/* ✨ White text with premium golden glow */
+
 main h1,
 main h2,
 main h3,
@@ -696,18 +707,19 @@ main h6 {
   color: #ffffff;
   text-shadow:
     0 2px 4px rgba(0, 0, 0, 0.95),
-    0 0 2px #b8860b,
-    0 0 6px rgba(184, 134, 11, 0.65),
-    0 0 12px rgba(139, 90, 0, 0.35);
+    0 0 3px #d4af37,
+    0 0 8px rgba(212, 175, 55, 0.75),
+    0 0 18px rgba(212, 175, 55, 0.45);
 }
 
 main p {
   color: #ffffff;
   text-shadow:
     0 1px 3px rgba(0, 0, 0, 0.95),
-    0 0 2px rgba(184, 134, 11, 0.65),
-    0 0 6px rgba(139, 90, 0, 0.35);
+    0 0 2px rgba(212, 175, 55, 0.5),
+    0 0 6px rgba(212, 175, 55, 0.25);
 }
+
 /* ================================
    AI ASSISTANT - FIXED CHAT WIDGET
    ================================ */
@@ -1015,6 +1027,10 @@ bottom: 10px;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 40px;
+}
+
+.skills-grid > :nth-child(4) {
+  grid-column: 2;
 }
 
 .skill-card {
