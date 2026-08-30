@@ -30,12 +30,12 @@ function About() {
 
         <div className="about-highlight">
           <h3>AI/ML & Data Science</h3>
-          <p>Machine Learning • Data Science • Generative AI</p>
+          <p>Machine Learning â€¢ Data Science â€¢ Generative AI</p>
         </div>
 
         <div className="about-highlight">
           <h3>Applied AI Intern</h3>
-          <p>AI • Machine Learning • Data Analytics</p>
+          <p>AI â€¢ Machine Learning â€¢ Data Analytics</p>
         </div>
       </div>
     </section>
