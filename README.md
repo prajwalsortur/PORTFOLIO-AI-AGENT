@@ -1,6 +1,6 @@
 # AI-Powered Voice Portfolio Agent
 
-An interactive, AI-powered personal portfolio built with React, Vite, FastAPI, and Groq. The portfolio includes a conversational AI agent that can answer questions about my background, skills, projects, experience, and portfolio.
+An interactive AI-powered personal portfolio built with **React, Vite, FastAPI, and Groq**. The portfolio combines a modern personal website with a conversational AI agent that can answer questions about my background, skills, projects, experience, and education.
 
 ## Live Demo
 
@@ -14,43 +14,43 @@ An interactive, AI-powered personal portfolio built with React, Vite, FastAPI, a
 
 ## Features
 
-* AI-powered conversational portfolio agent
-* Voice input using browser Speech Recognition
-* Voice responses using browser Speech Synthesis
-* Interactive AI chat interface
-* Voice-based portfolio navigation
-* Project, skills, experience, and education information
-* Cinematic animated portfolio design
-* Animated visual background
-* Responsive desktop and mobile design
-* Direct links to professional profiles and contact information
-* Downloadable CV
-* React + Vite frontend
-* Production deployment with Vercel and Render
+* 🤖 AI-powered conversational portfolio agent
+* 🎙️ Voice input using browser Speech Recognition
+* 🔊 Voice responses using browser Speech Synthesis
+* 💬 Interactive AI chat interface
+* 🧭 Voice-based portfolio navigation
+* 📂 Projects, skills, experience, and education sections
+* 🎨 Animated and interactive portfolio interface
+* 📱 Responsive desktop and mobile design
+* 🔗 Direct links to professional profiles
+* 📄 Downloadable CV
+* ⚡ React + Vite frontend
+* 🚀 FastAPI backend
+* ☁️ Production deployment with Vercel and Render
 
 ---
 
 ## How It Works
 
-The portfolio uses a React frontend connected to a FastAPI backend.
+The portfolio uses a React frontend connected to a FastAPI backend. The backend communicates with the Groq API to generate AI responses.
 
 ```text
 Visitor / Recruiter
         |
         v
 React + Vite Frontend
-(Portfolio + AI Voice Agent)
+(Portfolio + AI Agent)
         |
         v
 FastAPI Backend
 (API + AI Integration)
         |
         v
-Groq AI
-(LLM Response Engine)
+Groq
+(LLM Response Generation)
 ```
 
-The browser handles voice input and voice output, while the FastAPI backend communicates with Groq to generate AI responses.
+Voice input and voice output are handled directly by the browser using the Web Speech APIs.
 
 ---
 
@@ -60,10 +60,10 @@ The browser handles voice input and voice output, while the FastAPI backend comm
 
 * React
 * Vite
-* GSAP
-* React Markdown
 * JavaScript
 * CSS
+* GSAP
+* React Markdown
 
 ### Backend
 
@@ -82,8 +82,8 @@ The browser handles voice input and voice output, while the FastAPI backend comm
 
 ### Deployment
 
-* Vercel - Frontend
-* Render - Backend
+* Vercel — Frontend
+* Render — Backend
 
 ### Development Tools
 
@@ -138,14 +138,14 @@ AI-Powered-Voice-Portfolio-Agent/
 
 ## Run Locally
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/prajwalsortur/PORTFOLIO-AI-AGENT.git
 cd PORTFOLIO-AI-AGENT
 ```
 
-### 2. Start the backend
+### 2. Start the Backend
 
 ```bash
 cd backend
@@ -187,7 +187,7 @@ The backend will run at:
 http://127.0.0.1:8000
 ```
 
-### 3. Start the frontend
+### 3. Start the Frontend
 
 Open another terminal:
 
@@ -213,9 +213,9 @@ The backend requires:
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-The API key must never be committed to GitHub.
+The API key must **never** be committed to GitHub.
 
-The repository ignores the backend `.env` file through:
+The backend `.env` file is excluded from Git using:
 
 ```text
 backend/.gitignore
@@ -232,7 +232,7 @@ Users can:
 * Ask questions about the portfolio
 * Ask about projects and technical skills
 * Ask about experience and education
-* Navigate to portfolio sections using voice commands
+* Navigate through portfolio sections using voice commands
 * Receive spoken AI responses
 
 Voice functionality depends on browser support for the Web Speech APIs.
@@ -241,27 +241,27 @@ Voice functionality depends on browser support for the Web Speech APIs.
 
 ## Deployment
 
-The application uses a separated frontend and backend architecture.
+The application uses a separate frontend and backend architecture.
 
 ```text
 React + Vite
      |
      v
-Vercel
+   Vercel
      |
      v
 FastAPI Backend
      |
      v
-Render
+   Render
      |
      v
-Groq AI
+    Groq
 ```
 
-The frontend is deployed on Vercel and the FastAPI backend is deployed on Render.
+The frontend is deployed on **Vercel**, while the FastAPI backend is deployed on **Render**.
 
-The `GROQ_API_KEY` is configured as an environment variable on the backend deployment and is not stored in the repository.
+The `GROQ_API_KEY` is stored as an environment variable on the backend deployment and is not included in the repository.
 
 ---
 
@@ -269,7 +269,15 @@ The `GROQ_API_KEY` is configured as an environment variable on the backend deplo
 
 This project was created to go beyond a traditional static portfolio by combining a personal website with an interactive AI assistant.
 
-The goal is to allow recruiters and visitors to explore my background through both a conventional portfolio interface and a conversational AI experience.
+The goal is to allow recruiters and visitors to explore my:
+
+* Background
+* Technical skills
+* Projects
+* Experience
+* Education
+
+through both a conventional portfolio interface and a conversational AI experience.
 
 ---
 
@@ -277,19 +285,22 @@ The goal is to allow recruiters and visitors to explore my background through bo
 
 **Prajwal Sortur**
 
-Electronics & Communication Engineering Graduate
+Bachelor of Engineering — Electronics & Communication Engineering
 
-Areas of interest:
+### Areas of Interest
 
 * Artificial Intelligence
+* Machine Learning
 * Generative AI
+* Data Science
 * Data Analytics
 * Python
-* Machine Learning
 * Interactive Web Applications
 
 ---
 
 ## Project Status
 
-The portfolio is deployed and production-tested across desktop and mobile devices.
+**Deployed and actively maintained.**
+
+The portfolio is available online with a React frontend deployed on Vercel and a FastAPI backend deployed on Render.
