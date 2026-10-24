@@ -299,8 +299,4 @@ Bachelor of Engineering — Electronics & Communication Engineering
 
 ---
 
-## Project Status
 
-**Deployed and actively maintained.**
-
-The portfolio is available online with a React frontend deployed on Vercel and a FastAPI backend deployed on Render.
