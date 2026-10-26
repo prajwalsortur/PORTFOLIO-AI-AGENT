@@ -280,23 +280,3 @@ The goal is to allow recruiters and visitors to explore my:
 through both a conventional portfolio interface and a conversational AI experience.
 
 ---
-
-## Author
-
-**Prajwal Sortur**
-
-Bachelor of Engineering — Electronics & Communication Engineering
-
-### Areas of Interest
-
-* Artificial Intelligence
-* Machine Learning
-* Generative AI
-* Data Science
-* Data Analytics
-* Python
-* Interactive Web Applications
-
----
-
-
