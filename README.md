@@ -1,98 +1,86 @@
 # AI-Powered Voice Portfolio Agent
 
-An interactive AI-powered personal portfolio built with **React, Vite, FastAPI, and Groq**. The portfolio combines a modern personal website with a conversational AI agent that can answer questions about my background, skills, projects, experience, and education.
+An interactive AI-powered personal portfolio built with **React, Vite, FastAPI, and Groq**. It combines a personal portfolio website with a conversational AI assistant that helps visitors explore my background, technical skills, projects, experience, and education.
 
 ## Live Demo
 
-**Portfolio:** https://prajwal-ai-portfolio.vercel.app/
-
-**Backend API:** https://portfolio-ai-agent-anyb.onrender.com
-
-**GitHub:** https://github.com/prajwalsortur/PORTFOLIO-AI-AGENT
-
----
+- **Portfolio:** https://prajwal-ai-portfolio.vercel.app/
+- **Backend API:** https://portfolio-ai-agent-anyb.onrender.com
+- **GitHub Repository:** https://github.com/prajwalsortur/PORTFOLIO-AI-AGENT
 
 ## Features
 
-* 🤖 AI-powered conversational portfolio agent
-* 🎙️ Voice input using browser Speech Recognition
-* 🔊 Voice responses using browser Speech Synthesis
-* 💬 Interactive AI chat interface
-* 🧭 Voice-based portfolio navigation
-* 📂 Projects, skills, experience, and education sections
-* 🎨 Animated and interactive portfolio interface
-* 📱 Responsive desktop and mobile design
-* 🔗 Direct links to professional profiles
-* 📄 Downloadable CV
-* ⚡ React + Vite frontend
-* 🚀 FastAPI backend
-* ☁️ Production deployment with Vercel and Render
-
----
+- AI-powered conversational portfolio assistant
+- Voice input using browser Speech Recognition
+- Spoken responses using browser Speech Synthesis
+- Interactive AI chat interface
+- Voice-based navigation between portfolio sections
+- Dedicated sections for projects, skills, experience, education, and contact
+- Animated and interactive user interface
+- Responsive design for desktop and mobile devices
+- Links to professional profiles
+- Downloadable CV
+- React and Vite frontend
+- FastAPI backend integrated with the Groq API
+- Frontend and backend deployed using Vercel and Render
 
 ## How It Works
 
-The portfolio uses a React frontend connected to a FastAPI backend. The backend communicates with the Groq API to generate AI responses.
+The React frontend displays the portfolio and provides the AI chat interface. When a visitor asks a question, the frontend sends it to the FastAPI backend, which communicates with the Groq API to generate a response.
+
+Voice input and spoken responses are handled by the browser using the Web Speech APIs.
 
 ```text
 Visitor / Recruiter
         |
         v
 React + Vite Frontend
-(Portfolio + AI Agent)
+(Portfolio + AI Chat Interface)
         |
         v
 FastAPI Backend
 (API + AI Integration)
         |
         v
-Groq
+Groq API
 (LLM Response Generation)
+        |
+        v
+AI Response to the Visitor
 ```
-
-Voice input and voice output are handled directly by the browser using the Web Speech APIs.
-
----
 
 ## Tech Stack
 
 ### Frontend
-
-* React
-* Vite
-* JavaScript
-* CSS
-* GSAP
-* React Markdown
+- React
+- Vite
+- JavaScript
+- CSS
+- GSAP
+- React Markdown
 
 ### Backend
-
-* Python
-* FastAPI
-* Uvicorn
-* Groq API
-* python-dotenv
-* python-multipart
+- Python
+- FastAPI
+- Uvicorn
+- Groq API
+- python-dotenv
+- python-multipart
 
 ### Browser APIs
-
-* Web Speech API
-* Speech Recognition
-* Speech Synthesis API
+- Web Speech API
+- Speech Recognition
+- Speech Synthesis
 
 ### Deployment
-
-* Vercel — Frontend
-* Render — Backend
+- **Vercel:** Frontend hosting
+- **Render:** Backend hosting
 
 ### Development Tools
-
-* Git
-* GitHub
-* VS Code
-* npm
-
----
+- Git
+- GitHub
+- Visual Studio Code
+- npm
 
 ## Project Structure
 
@@ -134,9 +122,18 @@ AI-Powered-Voice-Portfolio-Agent/
 `-- README.md
 ```
 
----
+## Getting Started
 
-## Run Locally
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+Install the following tools before starting:
+
+- Python
+- Node.js and npm
+- Git
+- A Groq API key
 
 ### 1. Clone the Repository
 
@@ -145,51 +142,55 @@ git clone https://github.com/prajwalsortur/PORTFOLIO-AI-AGENT.git
 cd PORTFOLIO-AI-AGENT
 ```
 
-### 2. Start the Backend
+### 2. Set Up the Backend
 
-```bash
+Navigate to the backend directory:
+
+```powershell
 cd backend
 ```
 
 Create a Python virtual environment:
 
-```bash
+```powershell
 python -m venv venv
 ```
 
-Activate it on Windows:
+Activate the virtual environment on Windows:
 
 ```powershell
-venv\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1
 ```
 
-Install the dependencies:
+Install the required dependencies:
 
-```bash
+```powershell
 pip install -r requirements.txt
 ```
 
-Create a `.env` file inside the `backend` folder:
+Create a `.env` file inside the `backend` directory and add your Groq API key:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-Start the FastAPI server:
+Start the FastAPI development server:
 
-```bash
+```powershell
 uvicorn main:app --reload
 ```
 
-The backend will run at:
+The backend will be available at:
 
-```text
 http://127.0.0.1:8000
-```
 
-### 3. Start the Frontend
+You can access the interactive API documentation at:
 
-Open another terminal:
+http://127.0.0.1:8000/docs
+
+### 3. Set Up the Frontend
+
+Open a second terminal from the project root directory and run:
 
 ```powershell
 cd frontend
@@ -197,86 +198,77 @@ npm install
 npm run dev
 ```
 
-The frontend will run at:
+The frontend will be available at:
 
-```text
 http://localhost:5173
-```
-
----
 
 ## Environment Variables
 
-The backend requires:
+The backend requires the following environment variable:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-The API key must **never** be committed to GitHub.
-
-The backend `.env` file is excluded from Git using:
-
-```text
-backend/.gitignore
-```
-
----
+**Security note:** Never commit your actual API key to GitHub. Keep the `.env` file excluded from version control using `backend/.gitignore`. Configure the same environment variable in Render for production deployment.
 
 ## Voice Interaction
 
-The AI agent supports browser-based voice interaction.
+The portfolio assistant supports browser-based voice interaction.
 
-Users can:
+Visitors can:
 
-* Ask questions about the portfolio
-* Ask about projects and technical skills
-* Ask about experience and education
-* Navigate through portfolio sections using voice commands
-* Receive spoken AI responses
+- Ask questions about my background and technical skills
+- Explore my projects and experience
+- Ask about my education
+- Navigate portfolio sections using supported voice commands
+- Listen to AI-generated responses
 
-Voice functionality depends on browser support for the Web Speech APIs.
+Voice features depend on browser compatibility and microphone permissions. Speech Recognition support may vary between browsers.
 
----
-
-## Deployment
+## Deployment Architecture
 
 The application uses a separate frontend and backend architecture.
 
 ```text
-React + Vite
-     |
-     v
-   Vercel
-     |
-     v
+Frontend: React + Vite
+        |
+        v
+Vercel Hosting
+        |
+        v
 FastAPI Backend
-     |
-     v
-   Render
-     |
-     v
-    Groq
+        |
+        v
+Render Hosting
+        |
+        v
+Groq API
 ```
 
-The frontend is deployed on **Vercel**, while the FastAPI backend is deployed on **Render**.
+The frontend is hosted on Vercel, while the backend runs on Render. The backend uses the `GROQ_API_KEY` environment variable to communicate with the Groq API.
 
-The `GROQ_API_KEY` is stored as an environment variable on the backend deployment and is not included in the repository.
+## Project Purpose
+
+This project demonstrates how a traditional personal portfolio can be enhanced with conversational AI and voice interaction.
+
+It allows recruiters and visitors to explore my background through a conventional website or interact with an AI assistant to learn about my:
+
+- Technical skills
+- Projects
+- Internship experience
+- Education
+- Professional background
+
+The project also provides practical experience with frontend development, backend API integration, AI-powered applications, browser speech APIs, and cloud deployment.
+
+## Author
+
+**Prajwal Sortur**
+
+- **GitHub:** https://github.com/prajwalsortur
+- **Portfolio:** https://prajwal-ai-portfolio.vercel.app/
 
 ---
 
-## Purpose
-
-This project was created to go beyond a traditional static portfolio by combining a personal website with an interactive AI assistant.
-
-The goal is to allow recruiters and visitors to explore my:
-
-* Background
-* Technical skills
-* Projects
-* Experience
-* Education
-
-through both a conventional portfolio interface and a conversational AI experience.
-
----
+If you find this project interesting, feel free to explore the repository and try the live demo.
