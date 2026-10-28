@@ -144,11 +144,9 @@ p {
 .hero-background {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: scale(1);
+  background: #031211;
   z-index: 0;
+  pointer-events: none;
 }
 
 
@@ -653,10 +651,28 @@ section > h2 {
 
   /* SKILLS */
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 95%;
+  gap: 20px;
+}
+
+.skill-card:last-child {
+  grid-column: 2;
+}
+
+@media (max-width: 800px) {
   .skills-grid {
     grid-template-columns: 1fr;
     width: 95%;
   }
+
+  .skill-card:last-child {
+    grid-column: auto;
+  }
+}
+
 
   /* PROJECTS */
 
@@ -1012,7 +1028,7 @@ bottom: 10px;
 .skills-grid {
   width: min(1000px, 90%);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 25px;
   margin-top: 40px;
 }
@@ -1073,8 +1089,24 @@ bottom: 10px;
 
 @media (max-width: 900px) {
   .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 95%;
+    gap: 15px;
+  }
+
+  .skills-grid > :nth-child(4) {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
     grid-template-columns: 1fr;
-    width: min(700px, 90%);
+    width: 95%;
+  }
+
+  .skills-grid > :nth-child(4) {
+    grid-column: auto;
   }
 }
 
@@ -1366,3 +1398,13 @@ main:has(.ai-agent-panel) .ai-agent-button {
 }
 
 
+.skills-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: min(1000px, 90%) !important;
+  gap: 25px !important;
+}
+
+.skills-grid > .skill-card:nth-child(4) {
+  grid-column: 2 !important;
+}

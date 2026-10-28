@@ -1,7 +1,6 @@
 
 import { useEffect } from 'react'
 import gsap from 'gsap'
-import heroImage from '../assets/teal-eye-mosaic.jpeg'
 
 function Hero() {
   useEffect(() => {
@@ -48,11 +47,7 @@ function Hero() {
 
   return (
     <section className="hero">
-      {/* Keep the original mosaic image as the background. */}
-      <div
-        className="hero-background"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+  <div className="hero-background" />
 
       {/* Provides subtle contrast while preserving the image colors. */}
       <div className="hero-overlay" />
