@@ -225,6 +225,7 @@ p {
   fill: currentColor;
 }
 
+
 .hero-title {
   color: white;
   font-size: clamp(2.2rem, 5vw, 4rem);
@@ -233,15 +234,10 @@ p {
   letter-spacing: 1px;
   text-shadow: 0 2px 12px rgba(3, 18, 17, 0.45);
   margin-bottom: 12px;
-  line-height: 1.1;
-  display: table;
   margin-left: auto;
   margin-right: auto;
-  padding: 4px 18px;
-  background: rgba(0, 0, 0, 0.88);
-  border-radius: 10px;
-
 }
+
 
 /* ================================
    PROJECT CARDS - NEON STYLE
