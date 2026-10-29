@@ -1,21 +1,18 @@
 /* Global colors for the teal eye mosaic portfolio theme */
+
 :root {
   --neon: #00AEBB;
   --neon-light: #BDBEAF;
   --neon-glow: rgba(0, 174, 187, 0.22);
-  --dark: #031211;
+  --dark: #000000;
 
-  --ink-black: #031211;
+  --ink-black: #000000;
   --warm-ivory: #E8E4D3;
   --electric-teal: #00AEBB;
   --muted-ivory: #BDBEAF;
   --dark-teal: #073B38;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -144,10 +141,15 @@ p {
 .hero-background {
   position: absolute;
   inset: 0;
-  background: #031211;
+  background-color: #000000;
+  background-image: url("./assets/teal-eye-mosaic.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 0;
   pointer-events: none;
 }
+
 
 
 /* Subtle shading for readable hero text while preserving the mosaic */
@@ -825,9 +827,8 @@ bottom: 10px;
 .ai-agent-body {
   flex: 1;
   padding: 18px;
-
+  background: #000000;
   overflow-y: auto;
-
   display: flex;
   flex-direction: column;
   gap: 12px;
